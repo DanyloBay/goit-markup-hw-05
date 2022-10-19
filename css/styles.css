@@ -169,6 +169,7 @@ img {
     margin-right: 50px;
 }
 
+
 .contacts__content {
     display: flex;
 }
@@ -183,6 +184,14 @@ img {
 .menu__nav:hover,
 .menu__nav:focus {
     color: var(--second-color);
+}
+
+.menu>.item::after {
+    display: block;
+    content: "";
+    border-bottom: 4px solid var(--second-color);
+    border-radius: 4px;
+    margin-top: 28px;
 }
 
 .menu__active {
