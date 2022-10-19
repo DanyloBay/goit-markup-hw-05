@@ -177,7 +177,6 @@ img {
 .menu__nav {
     display: block;
     padding-top: 32px;
-    padding-bottom: 32px;
     color: var(--main-color);
 }
 
@@ -186,11 +185,12 @@ img {
     color: var(--second-color);
 }
 
-.menu>.item::after:hover {
+.item>.menu__active::after {
     display: block;
     content: "";
     border-bottom: 4px solid var(--second-color);
     border-radius: 4px;
+    margin-top: 28px;
 }
 
 .menu__active {
