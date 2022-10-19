@@ -186,12 +186,11 @@ img {
     color: var(--second-color);
 }
 
-.menu>.item::after {
+.menu>.item::after:hover {
     display: block;
     content: "";
     border-bottom: 4px solid var(--second-color);
     border-radius: 4px;
-    margin-top: 28px;
 }
 
 .menu__active {
