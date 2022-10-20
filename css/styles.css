@@ -313,7 +313,9 @@ img {
 
     background-color: var(--backdrop);
 
-    transition: transform 500ms ease;
+    transition: transform 500ms ease,
+        opacity 300ms ease,
+        visibility 300ms ease;
 
 }
 
@@ -322,7 +324,7 @@ img {
     visibility: hidden;
     pointer-events: none;
 
-    transform: scale(0.1, 1);
+    transform: scale3d(0.1, 0.5, 1);
 }
 
 .modal {
@@ -588,6 +590,7 @@ img {
 
 .portfolio__link {
     display: block;
+    position: relative;
 
     transition-property: box-shadow;
     transition-duration: 250ms;
@@ -596,6 +599,7 @@ img {
 
 .portfolio__thumb {
     position: relative;
+    overflow: hidden;
 }
 
 .thumb__item::before {
@@ -605,16 +609,17 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--overlay-color);
-    opacity: 0;
+    transform: translateY(100%);
 
-    transition-property: opacity;
+    transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
+
 .thumb__item:hover::before {
-    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -626,21 +631,23 @@ img {
     color: var(--white-text-color);
     margin: 0;
 
+    display: inline-block;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 322px;
-    min-height: 168px;
-    transform: translate(-50%, -50%);
-    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    transform: translateY(100%);
 
-    transition-property: opacity;
+    transition-property: transform, background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.thumb__item:hover .thumb__overlay {
-    opacity: 1;
+.portfolio__example:hover .thumb__overlay {
+    transform: translateY(0);
+    background-color: var(--overlay-color);
 }
 
 .portfolio__link:hover,
