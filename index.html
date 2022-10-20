@@ -59,7 +59,18 @@
             <div class="container">
                 <h1 class="main__tittle">Ефективні рішення для <br> вашого бізнесу</h1>
 
-                <button type="button" name="Order the service" class="main__button">Замовити послугу</button>
+                <button data-modal-open type="button" name="Order the service" class="main__button">Замовити
+                    послугу</button>
+            </div>
+
+            <div class="backdrop is__hidden" data-modal>
+                <div class="modal">
+                    <a data-modal-close href="" class="modal__item">
+                        <svg class="modal__close__icon">
+                            <use href="./images/iconst.svg#icon-close"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -124,12 +135,30 @@
                 <h2 class="section__tittle">Чим ми займаємося</h2>
 
                 <ul class="projects list">
-                    <li class="projects__example"> <img src="./images/occupation1.jpg" width="370" height="294"
-                            alt="Людина програмує"> </li>
+                    <li class="projects__example">
+                        <img src="./images/occupation1.jpg" width="370" height="294" alt="Людина програмує">
+
+                        <div class="back__projects back__text">
+                            Десктопні додатки
+                        </div>
+
+                    </li>
                     <li class="projects__example"> <img src="./images/occupation2.jpg" width="370" height="294"
-                            alt="Настроювання процесів"> </li>
+                            alt="Настроювання процесів">
+
+                        <div class="back__projects back__text">
+                            Мобільні додатки
+                        </div>
+
+                    </li>
                     <li class="projects__example"> <img src="./images/occupation3.jpg" width="370" height="294"
-                            alt="Графічний дизайн"> </li>
+                            alt="Графічний дизайн">
+
+                        <div class="back__projects back__text">
+                            Дизайнерські рішення
+                        </div>
+
+                    </li>
                 </ul>
             </div>
 
@@ -402,6 +431,8 @@
         </div>
 
     </footer>
+
+    <script src="./js/modal.js"></script>
 
 </body>
 
