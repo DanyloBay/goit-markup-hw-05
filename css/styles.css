@@ -186,6 +186,7 @@ img {
 .menu__nav {
     display: block;
     padding-top: 32px;
+    padding-bottom: 32px;
     color: var(--main-color);
 
     transition-property: color;
@@ -198,16 +199,21 @@ img {
     color: var(--second-color);
 }
 
+.menu__active {
+    position: relative;
+    color: var(--second-color);
+}
+
 .item>.menu__active::after {
     display: block;
     content: "";
-    border-bottom: 4px solid var(--second-color);
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: var(--second-color);
     border-radius: 4px;
-    margin-top: 28px;
-}
-
-.menu__active {
-    color: var(--second-color);
 }
 
 /* Contacts */
@@ -645,7 +651,8 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio__example:hover .thumb__overlay {
+.portfolio__link:hover .thumb__overlay,
+.portfolio__link:focus .thumb__overlay {
     transform: translateY(0);
     background-color: var(--overlay-color);
 }
